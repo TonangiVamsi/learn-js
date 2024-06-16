@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="startbutton();">Start</button>
+    <button onclick="stopbtn();">Stop</button>
+    <button onclick="resetbtn()">Reset</button>
+    <p class="js-start-btn"></p>
+
+    <script>
+        let isautoplay = false;
+
+        let intervalid;
+        let result = 0;
+        const startbutton = function startbtn() {
+            if (isautoplay === false) {
+                intervalid = setInterval(function () {
+                    result = result + 1;
+                    document.querySelector('.js-start-btn').innerHTML = result;
+
+                }, 1000);
+                isautoplay=true
+            }
+            else {
+                clearInterval(intervalid);
+                isautoplay = false
+            }
+        }
+
+        function stopbtn() {
+            clearInterval(intervalid);
+            isautoplay = false
+        }
+
+        function resetbtn(){
+            stopbtn()
+            result=0
+            document.querySelector('.js-start-btn').innerHTML=result;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="js-body">
+    <button onclick="button()" class="js-button">finishlater</button>
+    <button onclick="add()">Add To Cart</button>
+    <p class="js-add"></p>
+    <script>
+        
+        const finishbtn= document.querySelector('.js-button');
+        const result= finishbtn.innerHTML;
+        function button(){
+                if(result==='finishlater')
+                {
+                    finishbtn.innerHTML='loading...';
+                    setInterval(function(){
+                    finishbtn.innerHTML='finished';
+                    }, 1000);
+                }
+        } 
+/*
+        function add()
+        {
+            document.querySelector('.js-add').innerHTML='Added';
+            setInterval(function(){
+                document.querySelector('.js-add').innerHTML='';
+            } , 1000);
+        } */
+
+        document.querySelector('.js-button').addEventListener('click' ,() =>{
+            button();
+        })
+
+        document.body.addEventListener('keydown', () => {
+            console.log('keydown');
+        });
+
+
+
+        
+    </script>
+</body>
+</html>

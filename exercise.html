@@ -1,0 +1,111 @@
+<!-- //07 class exercise//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function coverttocelisus(fahrenhiet)
+        {
+            let celsius = (fahrenhiet-32)*5/9;
+            return celsius;
+        }
+        
+
+        function coverttofahrenhiet(celsius)
+        {
+            let fahrenhiet = (celsius*9/5)+32;
+            return fahrenhiet;
+        }
+        
+
+        function converttemperature(degree , unit)
+        {
+           if(unit==='c')
+           {
+            const result=coverttofahrenhiet(degree);
+            return (result+'F');
+           }
+           else if(unit==='f'){
+            const result=coverttocelisus(degree);
+            return (result+'C');
+           }
+        }
+
+        console.log(converttemperature(25,'c'));
+        console.log(converttemperature(92,'f'))
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const amazon={
+            basketball:2095,
+            'delivery-time':'3 days',
+        }
+        amazon.basketball+=500;
+        console.log(amazon.basketball);
+        console.log(amazon['delivery-time']);
+
+
+        function compareprice(product1, product2)
+        {
+          let result='';
+          if(product1.price < product2.price)
+          {
+            result=console.log(product1.price);
+          }
+          else{
+            result=console.log(product2.price);
+          }
+          return result;
+        }
+        
+        const bat1={
+            name:'puma bat',
+            price:2500
+          };
+          const bat2={
+            name:'NB bat',
+            price:3000
+          };
+          compareprice(bat1,bat2); 
+
+          function issameproduct(product3,product4){
+            if(product3.name===product4.name && product3.price===product4.price)
+             return true;
+            else
+             return false;
+          }
+
+          const product3={
+             name:'puma bat',
+             price:2500
+          };
+          const product4={
+            name:'puma bat',
+            price:2500
+          };
+          console.log(issameproduct(product3,product4))
+
+          let a='string';
+          console.log(a.toUpperCase());
+          console.log(a.repeat(4));
+          
+        
+
+    </script>
+</body>
+</html>

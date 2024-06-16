@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="toss('Heads')">Heads</button>
+    <button onclick="toss('Tails')">Tails</button>
+    <p class="a"></p> <br>
+
+    <input placeholder="enter your name" class="inputholder" onkeyup="submission()">
+        <button onclick="submission()">Submit</button>
+        <p class="abc"></p> 
+
+
+    <script>
+        function toss(yourmove){
+            if(yourmove==='Heads')
+            {
+               document.querySelector('.a').innerHTML='you choose:'+yourmove;
+            }
+            else{
+                document.querySelector('.a').innerHTML='you choose:'+yourmove; 
+            }
+        }
+
+        function submission()
+            {
+               const input_element=document.querySelector('.inputholder');
+               document.querySelector('.abc').
+                 innerHTML='your name: '+input_element.value;
+            }
+
+        function key(event){
+            if(event.key==='Enter'){
+                submission();
+            }
+        }
+    </script> 
+     
+</body>
+</html>
